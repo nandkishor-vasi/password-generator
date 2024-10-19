@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -37,6 +39,108 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+/* Styles for Password Generator */
+body {
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text */
+  font-family: 'Roboto', sans-serif; /* Ensure Roboto font is applied */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #61dafb; /* Light blue border on focus */
+}
+
+input[type="range"] {
+  cursor: pointer;
+  background: #444;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb; /* Light blue button */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space items evenly */
+}
+
+.shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-lg {
+  border-radius: 10px; /* Round corners */
+}
+
+.bg-gray-800 {
+  background-color: #1e1e1e; /* Dark background for the card */
+}
+
+.text-orange-600 {
+  color: #ff9c00; /* Orange text */
+}
+
+.mt-40 {
+  margin-top: 10rem; /* Space from top */
+}
+
+.p-4 {
+  padding: 1rem; /* General padding */
+}
+
+.pb-4 {
+  padding-bottom: 1rem; /* Bottom padding */
+}
+
+.text-white {
+  color: #ffffff; /* White text color */
+}
+
+.text-red-500 {
+  color: #ff0000; /* Red text for the heart */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Smaller text */
+}
+
+.gap-x-2 {
+  gap: 0.5rem; /* Space between items */
+}
+
+.gap-x-4 {
+  gap: 1rem; /* Larger space between items */
+}
+
+.mb-4 {
+  margin-bottom: 1rem; /* Margin bottom */
+}
+
+.mt-2 {
+  margin-top: 0.5rem; /* Margin top */
 }
