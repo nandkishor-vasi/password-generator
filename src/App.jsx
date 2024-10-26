@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import './App.css'
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
   const [password, setPassword] = useState("");
 
   const passwordRef = useRef(null);
-
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "";
@@ -56,10 +55,9 @@ function App() {
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
-  useEffect(() => {
+  const handleGeneratePassword = () => {
     passwordGenerator();
-  }, [length, numberAllowed, charAllowed, upperAllowed, lowerAllowed, noRepeat, avoidAmbiguous, passwordGenerator]);
-
+  };
   return (
     <>
       <div className="w-full max-w-md mx-auto shadow-md 
@@ -162,6 +160,11 @@ function App() {
               />
               <label htmlFor='ambiguousInput'>Avoid Ambiguous Characters</label>
             </div>
+          </div>
+          <div className='w-full flex flex-wrap justify-center text-cyan-50'>
+            <button onClick={handleGeneratePassword} className="generator__btn bg-blue-700 px-4 py-1 ">
+              Generate Password
+            </button>
           </div>
         </div>
       </div>
